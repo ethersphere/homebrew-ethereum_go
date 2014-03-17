@@ -12,9 +12,11 @@ brew install go-ethereum
 
 To get the latest edge build, do:
 ```
+brew install eth-go --HEAD
 brew install go-ethereum --HEAD
 ```
 
+Yes, you do need to explicitly install eth-go from HEAD too.
 If you have not previously installed dependencies try to make sure homebrew does not compile dependencies from source (qt5 may take hours): https://github.com/Homebrew/homebrew/wiki/FAQ#why-do-you-compile-everything. 
 
 These brews can be installed via the raw GitHub URLs, or by cloning this
