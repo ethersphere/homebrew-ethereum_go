@@ -8,6 +8,7 @@ class EthGo < Formula
   version '0.3.1'
 
   depends_on 'go'
+  depends_on 'mercurial'
   depends_on 'gmp'
   depends_on 'leveldb'
 

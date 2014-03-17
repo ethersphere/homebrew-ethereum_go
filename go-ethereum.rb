@@ -8,7 +8,6 @@ class GoEthereum < Formula
   version '0.3.1'
 
   depends_on 'qt5'
-  # depends_on 'mercurial'
   depends_on 'pkg-config'
   depends_on './eth-go'
 
