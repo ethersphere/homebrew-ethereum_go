@@ -9,7 +9,7 @@ class GoEthereum < Formula
 
   depends_on 'qt5'
   depends_on 'pkg-config'
-  depends_on './eth-go'
+  depends_on 'eth-go'
 
   def install
     version = build.head? ? 'HEAD' : '0.3.1'
