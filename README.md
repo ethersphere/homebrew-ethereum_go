@@ -15,9 +15,7 @@ To get the latest edge build, do:
 brew install go-ethereum --HEAD
 ```
 
-If you have not previously installed depemdencies and install from HEAD, dependencies are compiled from source too. If you do not wish to wait for that (qt may take hours), better install their bottled versions:
-
-    brew install pkg-config go mercurial gmp leveldb qt5 
+If you have not previously installed dependencies try to make sure homebrew does not compile dependencies from source (qt5 may take hours): https://github.com/Homebrew/homebrew/wiki/FAQ#why-do-you-compile-everything. 
 
 These brews can be installed via the raw GitHub URLs, or by cloning this
 repository locally with `brew tap ethersphere/ethereum_go`.
@@ -49,6 +47,10 @@ See `brew info go-ethereum` and use `--verbose` to get more info while installin
 * Make changes to `/usr/local/Library/Taps/ethersphere/*.rb`
 * Reinstall with `brew reinstall go-ethereum.rb` (send a pull request!)
 * Take a walk
+
+The brewable dependencies are
+
+    brew install pkg-config go mercurial gmp leveldb qt5 
 
 ## Credits
 * https://github.com/zelig
