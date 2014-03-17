@@ -36,7 +36,7 @@ brew install eth-go --HEAD
 
 ##Options
 
-See `brew info go-ethereum` and use `--verbose` to get more info while installing.
+See `brew info go-ethereum` and use `--verbose` and/or `--debug` to get more info while installing.
 
 ##Troubleshooting
 
