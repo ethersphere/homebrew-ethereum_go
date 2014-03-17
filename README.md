@@ -6,7 +6,7 @@ Homebrew Tap for Ethereum Go Implementation
 ##Installation
 
 ```
-brew tap ethersphere/ethereum-go
+brew tap ethersphere/ethereum_go
 brew install go-ethereum 
 ```
 
