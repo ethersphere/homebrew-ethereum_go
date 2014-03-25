@@ -22,7 +22,7 @@ class GoEthereal < Formula
     export GOPATH=/tmp/go/;
     mkdir -p /tmp/go/src/github.com/ethereum;
     rm -rf /tmp/go/src/github.com/ethereum/eth-go;
-    ln -sf `brew --prefix`/Cellar/eth-go/#{version}/lib /tmp/go/src/github.com/ethereum/eth-go
+    ln -sf `brew --cellar`/eth-go/#{version}/lib /tmp/go/src/github.com/ethereum/eth-go
     rm -rf /tmp/go/src/github.com/ethereum/go-ethereum;
     ln -sf `pwd` /tmp/go/src/github.com/ethereum/go-ethereum;
     export PKG_CONFIG_PATH=`brew --prefix qt5`/lib/pkgconfig;

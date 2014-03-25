@@ -8,7 +8,7 @@ class GoEthereum < Formula
   head 'https://github.com/ethereum/go-ethereum.git', :branch => 'develop'
   url 'https://github.com/ethereum/go-ethereum.git', :branch => 'master', :revision => '642630db15a793cf0a0f7fbd827daee364df5423'
 
-  depends_on './eth-go'
+  depends_on 'eth-go'
 
   def executable
     "go-ethereum-#{version}"
