@@ -1,6 +1,6 @@
 require 'formula'
 
-class GoEthereum < Formula
+class GoEthereal < Formula
 
   version '0.3.1'
 
@@ -8,10 +8,12 @@ class GoEthereum < Formula
   head 'https://github.com/ethereum/go-ethereum.git', :branch => 'develop'
   url 'https://github.com/ethereum/go-ethereum.git', :branch => 'master', :revision => '642630db15a793cf0a0f7fbd827daee364df5423'
 
-  depends_on './eth-go'
+  depends_on 'qt5'
+  depends_on 'pkg-config'
+  depends_on 'eth-go'
 
   def executable
-    "go-ethereum-#{version}"
+    "go-ethereal-#{version}"
   end
 
   def install
@@ -20,20 +22,23 @@ class GoEthereum < Formula
     export GOPATH=/tmp/go/;
     mkdir -p /tmp/go/src/github.com/ethereum;
     rm -rf /tmp/go/src/github.com/ethereum/eth-go;
-    ln -sf `brew --cellar`/eth-go/#{version}/lib /tmp/go/src/github.com/ethereum/eth-go
+    ln -sf `brew --prefix`/Cellar/eth-go/#{version}/lib /tmp/go/src/github.com/ethereum/eth-go
     rm -rf /tmp/go/src/github.com/ethereum/go-ethereum;
     ln -sf `pwd` /tmp/go/src/github.com/ethereum/go-ethereum;
-    cd ethereum
+    export PKG_CONFIG_PATH=`brew --prefix qt5`/lib/pkgconfig;
+    export QT5VERSION=`pkg-config --modversion Qt5Core`;
+    export CGO_CPPFLAGS=-I`brew --prefix qt5`/include/QtCore/$QT5VERSION/QtCore;
+    cd ethereal
     go get .;
     go build -v;
-    mv ethereum #{executable};
+    mv ethereal #{executable};
     "
 
-    bin.install "ethereum/#{executable}"
+    bin.install "ethereal/#{executable}"
   end
 
   test do
-    system "#{executable} -m"
+    system executable
   end
 
 end
