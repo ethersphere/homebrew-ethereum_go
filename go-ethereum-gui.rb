@@ -32,10 +32,12 @@ class GoEthereumGui < Formula
     go get .;
     go build -v;
     mv ethereal #{executable};
+    mkdir -p go-ethereum-gui
+    mv assets go-ethereum-gui
     "
 
     bin.install "ethereal/#{executable}"
-    share.install "ethereal/assets"
+    share.install "ethereal/go-ethereum-gui"
   end
 
   test do

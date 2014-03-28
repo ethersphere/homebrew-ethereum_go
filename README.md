@@ -30,6 +30,9 @@ brew reinstall go-ethereum-gui --HEAD
 ```
 
 These will install the edge clients built from the develop branch. The executables are called `go-ethereum-cli-HEAD` and `go-ethereum-gui-HEAD`. 
+The GUI uses assets (qt resources) at run-time, so these are also installed under `/usr/local/share/go-ethereum-gui/assets`. The GUI client should be started with this asset path specified:
+
+    go-ethereum-gui-0.3.1 -asset-path /usr/local/share/go-ethereum-gui/assets
 
 Note:
 - you do need to explicitly install eth-go from HEAD too.
