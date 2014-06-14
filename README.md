@@ -1,6 +1,9 @@
 homebrew-ethereum-go
 ====================
 
+**OBSOLETE**: 
+use https://github.com/caktux/homebrew-ethereum
+
 Homebrew Tap for Ethereum Go Implementation
 
 This tap contains 3 kegs: 

@@ -23,8 +23,6 @@ class EthGo < Formula
     mkdir -p /tmp/go/src/github.com/ethereum;
     rm -rf /tmp/go/src/github.com/ethereum/eth-go;
     ln -sf `pwd` /tmp/go/src/github.com/ethereum/eth-go;
-    go get .
-    go build -v
     "
 
     lib.install Dir['*']
